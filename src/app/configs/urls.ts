@@ -4,5 +4,6 @@ const baseUrl = environment.API;
 export const urls = {
   auth:`${baseUrl}/auth`,
   refresh:`${baseUrl}/refresh`,
-  users:`${baseUrl}/users`
+  users:`${baseUrl}/users`,
+  apartments:`${baseUrl}/apartments`,
 }
