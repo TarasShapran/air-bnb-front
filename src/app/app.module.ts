@@ -9,13 +9,17 @@ import { LoginComponent } from './components/login/login.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MainInterceptor} from "./main.interceptor";
+import { UsersComponent } from './components/users/users.component';
+import { UserComponent } from './components/users/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    UsersComponent,
+    UserComponent
   ],
     imports: [
         BrowserModule,
