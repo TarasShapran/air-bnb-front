@@ -18,6 +18,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import { ApartmentsComponent } from './components/apartments/apartments.component';
 import { ApartmentComponent } from './components/apartments/apartment/apartment.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ApartmentComponent } from './components/apartments/apartment/apartment.
     UsersComponent,
     UserComponent,
     ApartmentsComponent,
-    ApartmentComponent
+    ApartmentComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

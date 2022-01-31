@@ -4,14 +4,16 @@ import {HomeComponent} from "./components/home/home.component";
 import {LoginComponent} from "./components/login/login.component";
 import {UsersComponent} from "./components/users/users.component";
 import {ApartmentsComponent} from "./components/apartments/apartments.component";
+import {RegisterComponent} from "./components/register/register.component";
 
 const routes: Routes = [
   {
     path: '', component: HomeComponent, children: [
-      {path: '', redirectTo: 'login', pathMatch: 'full'},
+      {path:'',redirectTo:'apartments',pathMatch:'full'},
       {path: 'login', component: LoginComponent},
-      {path:'users',component:UsersComponent},
-      {path:'apartments',component:ApartmentsComponent}
+      {path: 'users', component: UsersComponent},
+      {path: 'apartments', component: ApartmentsComponent},
+      {path: 'register', component: RegisterComponent}
 
     ]
   }

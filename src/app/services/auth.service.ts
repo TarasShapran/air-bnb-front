@@ -6,6 +6,7 @@ import {Observable} from "rxjs";
 import {urls} from "../configs";
 import {tap} from "rxjs/operators";
 import {UserService} from "./user.service";
+import {IRegister} from "../interfaces/register.user.interface";
 
 @Injectable({
   providedIn: 'root'

@@ -1,1 +1,4 @@
-<div>{{apartment|json}}</div>
+<!--<div>{{apartment|json}}</div>-->
+<div *ngFor="let photo of apartment.photo">
+  <img src="{{photo}}" alt="{{apartment.type}}">
+</div>

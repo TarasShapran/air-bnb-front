@@ -10,8 +10,6 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
   email: string;
-  hide: boolean;
-
   constructor(private transferService: DataTransferService, private userService: UserService, private router: Router) {
   }
 
@@ -27,7 +25,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['users'])
   }
 
-  getApartments() {
-    this.router.navigate(['apartments'])
+  login():void {
+    this.router.navigate(['login'])
   }
 }
