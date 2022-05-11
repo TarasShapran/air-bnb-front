@@ -7,6 +7,8 @@ export interface IApartments {
   number_of_rooms: number;
   number_of_beds: number;
   amount_of_places: number;
+  number_of_star: number;
+  title: string;
   star_rating: number;
   description: string;
   approve: boolean;

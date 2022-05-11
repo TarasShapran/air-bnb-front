@@ -19,6 +19,11 @@ import {MatIconModule} from "@angular/material/icon";
 import { ApartmentsComponent } from './components/apartments/apartments.component';
 import { ApartmentComponent } from './components/apartments/apartment/apartment.component';
 import { RegisterComponent } from './components/register/register.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatSliderModule} from "@angular/material/slider";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {NgbCarouselModule, NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgImageSliderModule} from "ng-image-slider";
 
 @NgModule({
   declarations: [
@@ -32,17 +37,23 @@ import { RegisterComponent } from './components/register/register.component';
     ApartmentComponent,
     RegisterComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatIconModule,
+        MatCardModule,
+        MatSlideToggleModule,
+        MatSliderModule,
+        NgbCarouselModule,
+        NgbModule,
+        NgImageSliderModule,
+    ],
   providers: [{
     provide:HTTP_INTERCEPTORS,
     multi:true,
