@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient,HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {IApartments} from "../interfaces/apartments.interface";
 import {urls} from "../configs";
@@ -10,7 +10,15 @@ import {urls} from "../configs";
 export class ApartmentService {
 
   constructor(private httpClient:HttpClient) { }
-  getAll():Observable<IApartments[]>{
-    return this.httpClient.get<IApartments[]>(`${urls.apartments}`)
+  getAll(perPage=5,page=1,sortBy='createdAt'):Observable<IApartments[]>{
+    const httpParams = new HttpParams({
+      fromObject:{
+        perPage,
+        page,
+        sortBy,
+
+      }
+    })
+    return this.httpClient.get<IApartments[]>(`${urls.apartments}`,{params:httpParams})
   }
 }
