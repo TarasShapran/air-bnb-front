@@ -24,6 +24,7 @@ import {MatSliderModule} from "@angular/material/slider";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {NgbCarouselModule, NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {NgImageSliderModule} from "ng-image-slider";
+import { ApartmentDetailsComponent } from './components/apartment-details/apartment-details.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {NgImageSliderModule} from "ng-image-slider";
     UserComponent,
     ApartmentsComponent,
     ApartmentComponent,
-    RegisterComponent
+    RegisterComponent,
+    ApartmentDetailsComponent
   ],
     imports: [
         BrowserModule,
