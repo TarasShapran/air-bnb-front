@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ApartmentService} from "../../services/apartment.service";
-import {IApartments} from "../../interfaces";
-import {createLogErrorHandler} from "@angular/compiler-cli/ngcc/src/execution/tasks/completion";
+import {IApartments, IUser} from "../../interfaces";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-apartment-details',
@@ -11,17 +11,19 @@ import {createLogErrorHandler} from "@angular/compiler-cli/ngcc/src/execution/ta
 })
 export class ApartmentDetailsComponent implements OnInit {
   apartment: IApartments;
+  user: IUser
 
-  constructor(private activatedRoute: ActivatedRoute, private apartmentService: ApartmentService) {
+  constructor(private activatedRoute: ActivatedRoute, private apartmentService: ApartmentService, private userService: UserService) {
     this.activatedRoute.params.subscribe(params => {
-        console.log(params);
         let id = params['id']
         apartmentService.getById(id).subscribe(value => this.apartment = value)
+
       }
     )
   }
 
   ngOnInit(): void {
+
   }
 
 }

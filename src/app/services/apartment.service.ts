@@ -12,7 +12,7 @@ export class ApartmentService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getAll(perPage = 5, page = 1, sortBy = 'createdAt'): Observable<IApartments[]> {
+  getAll(perPage = 10, page = 1, sortBy = 'createdAt'): Observable<IApartments[]> {
     const httpParams = new HttpParams({
       fromObject: {
         perPage,

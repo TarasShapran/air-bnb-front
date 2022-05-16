@@ -25,6 +25,7 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {NgbCarouselModule, NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {NgImageSliderModule} from "ng-image-slider";
 import { ApartmentDetailsComponent } from './components/apartment-details/apartment-details.component';
+import {CarouselModule, MDBBootstrapModule} from "angular-bootstrap-md";
 
 @NgModule({
   declarations: [
@@ -39,23 +40,25 @@ import { ApartmentDetailsComponent } from './components/apartment-details/apartm
     RegisterComponent,
     ApartmentDetailsComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        ReactiveFormsModule,
-        BrowserAnimationsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        MatIconModule,
-        MatCardModule,
-        MatSlideToggleModule,
-        MatSliderModule,
-        NgbCarouselModule,
-        NgbModule,
-        NgImageSliderModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatSlideToggleModule,
+    MatSliderModule,
+    NgbCarouselModule,
+    NgbModule,
+    NgImageSliderModule,
+    CarouselModule,
+    MDBBootstrapModule,
+  ],
   providers: [{
     provide:HTTP_INTERCEPTORS,
     multi:true,

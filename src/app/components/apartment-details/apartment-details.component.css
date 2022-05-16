@@ -1,0 +1,19 @@
+.wrap {
+  margin-top: 50px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.grade{
+  display: flex;
+  margin-top: 3px;
+  font-size: 15px;
+  color: darkred
+}
+.star-wrap{
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.photo-wrap{
+  border-radius: 2%;
+}

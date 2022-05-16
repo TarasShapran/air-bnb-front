@@ -1,1 +1,19 @@
-<p>{{apartment|json}}</p>
+<div class="wrap">
+  <h1 class="fw-bold">{{apartment.title}}</h1>
+  <div class=d-flex *ngIf="apartment.star_rating">
+    <mat-icon class="grade">grade</mat-icon>
+    <div class="star-wrap">
+      {{apartment.star_rating}}<span class="star-color"> ({{apartment.number_of_star}} відгуки)</span>
+    </div>
+  </div>
+  <div class="photo-wrap">
+    <mdb-carousel [animation]="'slide'">
+      <mdb-carousel-item *ngFor="let photo of apartment.photo">
+        <img class="d-block w-100 photo-wrap" src="{{photo}}" alt="photo">
+      </mdb-carousel-item>
+    </mdb-carousel>
+  </div>
+
+
+
+</div>
