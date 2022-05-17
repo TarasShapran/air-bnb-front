@@ -12,6 +12,7 @@ export class ApartmentsComponent implements OnInit {
   apartments: IApartments[]
   form: FormGroup
   orderByOptions: string[] = ['region', 'createdAt']
+  country: string
 
   constructor(private apartmentService: ApartmentService, private formBuilder: FormBuilder) {
 
@@ -22,7 +23,8 @@ export class ApartmentsComponent implements OnInit {
       this.apartments = value
     })
     this.form = this.formBuilder.group({
-      orderBy: new FormControl('region', [Validators.required])
+      orderBy: new FormControl('region', [Validators.required]),
+      country:new FormControl('')
     })
     this.form.get('orderBy')?.valueChanges.subscribe(value=>{
       this.apartmentService.getAll(10,1,value).subscribe(value => {

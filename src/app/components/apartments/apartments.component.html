@@ -1,5 +1,5 @@
-<div [formGroup]="form">
-<mat-form-field appearance="fill">
+<div [formGroup]="form" class="login-form-wrap">
+<mat-form-field appearance="fill" >
   <mat-label>OrderBy</mat-label>
   <mat-select formControlName="orderBy">
     <mat-option *ngFor="let option of orderByOptions" [value]="option">
@@ -7,7 +7,13 @@
     </mat-option>
   </mat-select>
 </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Country</mat-label>
+    <input matInput formControlName="country">
+  </mat-form-field>
 </div>
+
 <div class="wrap">
 <app-apartment  *ngFor="let apartment of apartments" [apartment]="apartment" ></app-apartment>
 </div>

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IApartments} from "../../../interfaces/apartments.interface";
+import {IApartments} from "../../../interfaces";
 import {Router} from "@angular/router";
 
 @Component({
@@ -11,14 +11,9 @@ export class ApartmentComponent implements OnInit {
   @Input()
   apartment: IApartments
 
-  constructor(  private router: Router) {
-
+  constructor() {
   }
 
   ngOnInit(): void {
   }
-  getApartment(): void {
-    this.router.navigate(['users'])
-  }
-
 }
