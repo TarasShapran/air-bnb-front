@@ -8,17 +8,20 @@ import {urls} from "../configs";
   providedIn: 'root'
 })
 export class ApartmentService {
-
+  price:number;
   constructor(private httpClient: HttpClient) {
   }
 
-  getAll(perPage = 10, page = 1, sortBy = 'createdAt'): Observable<IApartments[]> {
+  getAll(perPage = 0, page = 0, sortBy = 'createdAt',country='',city='',priceGte=0,priceLte =10000): Observable<IApartments[]> {
     const httpParams = new HttpParams({
       fromObject: {
         perPage,
         page,
         sortBy,
-
+        country,
+        city,
+        priceGte,
+        priceLte
       }
     })
     return this.httpClient.get<IApartments[]>(`${urls.apartments}`, {params: httpParams})

@@ -27,6 +27,7 @@ import {NgImageSliderModule} from "ng-image-slider";
 import { ApartmentDetailsComponent } from './components/apartment-details/apartment-details.component';
 import {CarouselModule, MDBBootstrapModule} from "angular-bootstrap-md";
 import {MatSelectModule} from '@angular/material/select';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import {MatSelectModule} from '@angular/material/select';
     NgImageSliderModule,
     CarouselModule,
     MDBBootstrapModule,
-    MatSelectModule
+    MatSelectModule,
+    MatPaginatorModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

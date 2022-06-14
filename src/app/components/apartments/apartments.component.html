@@ -1,6 +1,6 @@
 <div [formGroup]="form" class="login-form-wrap">
 <mat-form-field appearance="fill" >
-  <mat-label>OrderBy</mat-label>
+  <mat-label>Сортувати</mat-label>
   <mat-select formControlName="orderBy">
     <mat-option *ngFor="let option of orderByOptions" [value]="option">
       {{option}}
@@ -9,11 +9,30 @@
 </mat-form-field>
 
   <mat-form-field appearance="fill">
-    <mat-label>Country</mat-label>
+    <mat-label>Країна</mat-label>
     <input matInput formControlName="country">
   </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Місто</mat-label>
+    <input matInput formControlName="city">
+  </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Мінімальна ціна</mat-label>
+      <input matInput formControlName="minPrice" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Максимальна ціна</mat-label>
+      <input matInput formControlName="maxPrice" >
+    </mat-form-field>
+
+
 </div>
 
 <div class="wrap">
 <app-apartment  *ngFor="let apartment of apartments" [apartment]="apartment" ></app-apartment>
+</div>
+<div>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users" (page)="pageChanged($event)"></mat-paginator>
 </div>
