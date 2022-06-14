@@ -6,6 +6,8 @@ import {UsersComponent} from "./components/users/users.component";
 import {ApartmentsComponent} from "./components/apartments/apartments.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {ApartmentDetailsComponent} from "./components/apartment-details/apartment-details.component";
+import {UserDetailsComponent} from "./components/user-details/user-details.component";
+import {PersonalInfoComponent} from "./components/personal-info/personal-info.component";
 
 const routes: Routes = [
   {
@@ -13,7 +15,8 @@ const routes: Routes = [
       {path:'',redirectTo:'apartments',pathMatch:'full'},
       {path: 'login', component: LoginComponent},
       {path: 'users', component: UsersComponent},
-      // {path: 'apartment', component: LoginComponent},
+      {path: 'user-det', component: UserDetailsComponent},
+      {path: 'personal-info', component: PersonalInfoComponent},
       {path: 'apartments', component: ApartmentsComponent},
       {path: 'apartments/:id', component: ApartmentDetailsComponent},
       {path: 'register', component: RegisterComponent}

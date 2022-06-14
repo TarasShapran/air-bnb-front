@@ -30,4 +30,7 @@ export class ApartmentService {
   getById(id: string): Observable<IApartments> {
     return this.httpClient.get<IApartments>(`${urls.apartments}/`+id)
   }
+  getUsersApartment(): Observable<IApartments[]> {
+    return this.httpClient.get<IApartments[]>(`${urls.apartments}/me`)
+  }
 }

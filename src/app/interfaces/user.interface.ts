@@ -6,4 +6,5 @@ export interface IUser{
   is_superuser:boolean;
   createdAt:Date;
   updatedAt:Date;
+  avatar: string[];
 }

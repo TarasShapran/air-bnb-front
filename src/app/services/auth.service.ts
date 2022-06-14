@@ -29,7 +29,14 @@ export class AuthService {
         })
       )
   }
-
+  logout(): Observable<IToken> {
+    return this.httpClient.post<IToken>(`${urls.auth}/logout`, {token:this.getRefreshToken()})
+      .pipe(
+        tap((token: IToken) => {
+          this.setTokens(token)
+        })
+      )
+  }
   refreshToken(): Observable<IToken> {
     return this.httpClient.post<IToken>(`${urls.auth}/refresh`, {token:this.getRefreshToken()})
       .pipe(
