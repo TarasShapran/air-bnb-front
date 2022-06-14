@@ -1,7 +1,7 @@
 .wrap {
   margin-top: 50px;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .grade{
@@ -16,4 +16,14 @@
 }
 .photo-wrap{
   border-radius: 2%;
+}
+.description_wrap{
+  display: flex;
+  margin-top: 20px;
+}
+.description{
+  width: 60%;
+}
+.text_desc{
+  font-size: 10px;
 }

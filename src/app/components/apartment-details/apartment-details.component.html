@@ -13,7 +13,27 @@
       </mdb-carousel-item>
     </mdb-carousel>
   </div>
+  <div class="description_wrap">
+    <div class="description">
+<!--      <p (click)="userDet()">user</p>-->
+      <h2>Детальна інформація</h2>
+      <p>Ціна: {{apartment.price}}грн/за ніч</p>
+      <h3>Опис</h3>
+      <p>{{apartment.description}}</p>
+      <hr>
+      <p class="text_desc" >
+        Тип помешкання - {{apartment.type}};
+        Кількість кімнат - {{apartment.number_of_rooms}};
+        Кількість ліжок - {{apartment.number_of_beds}};
+        Кількість місць - {{apartment.amount_of_places}};
+      </p>
 
+
+    </div>
+    <div>
+      <h2>Процес бронювання</h2>
+    </div>
+  </div>
 
 
 </div>

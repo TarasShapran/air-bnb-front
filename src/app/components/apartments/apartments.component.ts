@@ -22,7 +22,7 @@ export class ApartmentsComponent implements OnInit {
   pageSize = 5;
   currentPage = 1;
   totalRows: 1;
-  pageSizeOptions: number[] = [5, 10, 25, 100];
+  pageSizeOptions: number[] = [8, 16, 25, 100];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -36,13 +36,13 @@ export class ApartmentsComponent implements OnInit {
     // this.apartmentService.getAll().subscribe(value => {
     //   this.apartments = value
     // })
-    this.form = this.formBuilder.group({
-      orderBy: new FormControl('region', [Validators.required]),
-      country: new FormControl(''),
-      city: new FormControl(''),
-      minPrice: new FormControl(0),
-      maxPrice: new FormControl(10000),
-    })
+    // this.form = this.formBuilder.group({
+    //   orderBy: new FormControl('region', [Validators.required]),
+    //   country: new FormControl(''),
+    //   city: new FormControl(''),
+    //   minPrice: new FormControl(0),
+    //   maxPrice: new FormControl(10000),
+    // })
     this.form = this.formBuilder.group({
       orderBy: new FormControl('region', [Validators.required]),
       country: new FormControl(''),

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {ApartmentService} from "../../services/apartment.service";
 import {IApartments, IUser} from "../../interfaces";
 import {UserService} from "../../services/user.service";
@@ -13,7 +13,7 @@ export class ApartmentDetailsComponent implements OnInit {
   apartment: IApartments;
   user: IUser
 
-  constructor(private activatedRoute: ActivatedRoute, private apartmentService: ApartmentService, private userService: UserService) {
+  constructor(private activatedRoute: ActivatedRoute, private apartmentService: ApartmentService, private userService: UserService,private router: Router) {
     this.activatedRoute.params.subscribe(params => {
         let id = params['id']
         apartmentService.getById(id).subscribe(value => this.apartment = value)
@@ -26,4 +26,7 @@ export class ApartmentDetailsComponent implements OnInit {
 
   }
 
+  userDet() {
+    this.router.navigate(['user-det'])
+  }
 }

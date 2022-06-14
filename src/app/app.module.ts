@@ -28,6 +28,8 @@ import { ApartmentDetailsComponent } from './components/apartment-details/apartm
 import {CarouselModule, MDBBootstrapModule} from "angular-bootstrap-md";
 import {MatSelectModule} from '@angular/material/select';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { PersonalInfoComponent } from './components/personal-info/personal-info.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     ApartmentsComponent,
     ApartmentComponent,
     RegisterComponent,
-    ApartmentDetailsComponent
+    ApartmentDetailsComponent,
+    UserDetailsComponent,
+    PersonalInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -21,8 +21,8 @@ export class HeaderComponent implements OnInit {
     })
   }
 
-  getUsers(): void {
-    this.router.navigate(['users'])
+  userInfo(): void {
+    this.router.navigate(['personal-info'])
   }
 
   login():void {
