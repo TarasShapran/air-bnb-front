@@ -1,0 +1,27 @@
+.form {
+  background-color: silver;
+  border-radius: 5%;
+  width: 20%;
+}
+
+.login-form-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+
+}
+
+.input {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

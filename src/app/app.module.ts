@@ -30,6 +30,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { PersonalInfoComponent } from './components/personal-info/personal-info.component';
+import { EditApartmentComponent } from './components/edit-apartment/edit-apartment.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { PersonalInfoComponent } from './components/personal-info/personal-info.
     RegisterComponent,
     ApartmentDetailsComponent,
     UserDetailsComponent,
-    PersonalInfoComponent
+    PersonalInfoComponent,
+    EditApartmentComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,8 @@ import { PersonalInfoComponent } from './components/personal-info/personal-info.
     CarouselModule,
     MDBBootstrapModule,
     MatSelectModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCheckboxModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

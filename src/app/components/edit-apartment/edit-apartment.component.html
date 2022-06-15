@@ -1,0 +1,83 @@
+<div class="login-form-wrap">
+  <form [formGroup]="registerForm" class="form">
+    <div class="input">
+      <mat-form-field>
+        <mat-label>Країна</mat-label>
+        <input matInput  formControlName="country">
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field>
+        <mat-label>Місто</mat-label>
+        <input matInput   formControlName="city">
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field>
+        <mat-label>Опис</mat-label>
+        <input matInput   formControlName="description">
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field>
+        <mat-label>Регіон</mat-label>
+        <input matInput  formControlName="region">
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field>
+        <mat-label>Тип</mat-label>
+        <input matInput  formControlName="type">
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field>
+        <mat-label>Кількість кімнат</mat-label>
+        <input matInput  formControlName="number_of_rooms">
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field>
+        <mat-label>Кількість ліжок</mat-label>
+        <input matInput  formControlName="number_of_beds">
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field>
+        <mat-label>Кількість місць</mat-label>
+        <input matInput  formControlName="amount_of_places">
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field>
+        <mat-label>Ціна за ніч</mat-label>
+        <input matInput  formControlName="price">
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field>
+        <mat-label>Заголовок</mat-label>
+        <input matInput  formControlName="title">
+      </mat-form-field>
+    </div>
+    <!--    <div class="input">-->
+    <!--      <mat-form-field>-->
+    <!--        <mat-label>Підтверджуння</mat-label>-->
+    <!--        <input matInput placeholder="{{apartment.approve}}"  formControlName="approve">-->
+    <!--      </mat-form-field>-->
+    <!--    </div>-->
+    <div class="input">
+
+      <section class="example-section">
+        <mat-checkbox class="example-margin">Підтверження броні</mat-checkbox>
+      </section>
+
+    </div>
+    <div class="buttons">
+      <div>
+        <button mat-raised-button color="primary" (click)="update()">Оновити інформацію</button>
+      </div>
+    </div>
+  </form>
+</div>
+
