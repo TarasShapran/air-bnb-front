@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ApartmentService} from "../../services/apartment.service";
 import {UserService} from "../../services/user.service";
 import {IApartments, IUser} from "../../interfaces";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-personal-info',
@@ -11,7 +12,7 @@ import {IApartments, IUser} from "../../interfaces";
 export class PersonalInfoComponent implements OnInit {
   apartments: IApartments[];
   user: IUser;
-  constructor(private apartmentService: ApartmentService, private userService: UserService) {
+  constructor(private apartmentService: ApartmentService, private userService: UserService, private router: Router ) {
   }
 
   ngOnInit(): void {
@@ -23,4 +24,7 @@ export class PersonalInfoComponent implements OnInit {
     })
   }
 
+  addApartment() {
+    this.router.navigate(['add-apartment'])
+  }
 }

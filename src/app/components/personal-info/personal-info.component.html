@@ -1,11 +1,22 @@
 <div class="wrap1">
-  <h2>{{user.name}}</h2>
-  <img class="img-wrap" src="{{user.avatar}}" alt="avatar">
-  <p>Email: {{user.email}}</p>
+  <div class="d-flex">
+    <div>
+      <h2>{{user.name}}</h2>
+      <img class="img-wrap" src="{{user.avatar}}" alt="avatar">
+      <p>Email: {{user.email}}</p>
+    </div>
+    <div class="margine-40">
+      <h2>Щоб здати житло в оренду натисніть:</h2>
+      <div class="buttons">
+        <div>
+          <button mat-raised-button color="primary" (click)="addApartment()">Стати господарем</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <h2>Щоб редагувати натисніть на житло</h2>
   <div class="wrap">
-
-    <app-apartment  *ngFor="let apartment of apartments" [apartment]="apartment" ></app-apartment>
+    <app-apartment *ngFor="let apartment of apartments" [apartment]="apartment"></app-apartment>
   </div>
 
 </div>

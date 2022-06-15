@@ -51,4 +51,10 @@ export class EditApartmentComponent implements OnInit {
       this.router.navigate(['personal-info'])
     })
   }
+
+  delete() {
+    this.apartmentService.deleteApartment(this.apartment.id).subscribe(()=>{
+      this.router.navigate(['personal-info'])
+    })
+  }
 }

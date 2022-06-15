@@ -9,6 +9,7 @@ import {ApartmentDetailsComponent} from "./components/apartment-details/apartmen
 import {UserDetailsComponent} from "./components/user-details/user-details.component";
 import {PersonalInfoComponent} from "./components/personal-info/personal-info.component";
 import {EditApartmentComponent} from "./components/edit-apartment/edit-apartment.component";
+import {NewApartmentComponent} from "./components/new-apartment/new-apartment.component";
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
       {path: 'users', component: UsersComponent},
       {path: 'user-det', component: UserDetailsComponent},
       {path: 'personal-info', component: PersonalInfoComponent},
+      {path: 'add-apartment', component: NewApartmentComponent},
       {path: 'apartments', component: ApartmentsComponent},
       {path: 'apartments/:id', component: ApartmentDetailsComponent},
       {path: 'personal-info/:id', component: EditApartmentComponent},

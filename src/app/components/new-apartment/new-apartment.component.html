@@ -1,4 +1,10 @@
 <div class="login-form-wrap">
+
+
+
+
+
+
   <form [formGroup]="updateForm" class="form">
     <div class="input">
       <mat-form-field>
@@ -79,14 +85,9 @@
     </div>
     <div class="buttons">
       <div>
-        <button mat-raised-button color="primary" (click)="update()">Оновити інформацію</button>
+        <button mat-raised-button color="primary" (click)="create()">Оновити інформацію</button>
       </div>
     </div>
-    <div class="buttons">
-      <div>
-        <button mat-raised-button color="primary" (click)="delete()">Видалити житло</button>
-      </div>
-    </div>
+
   </form>
 </div>
-

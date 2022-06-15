@@ -41,4 +41,7 @@ export class ApartmentService {
     return this.httpClient.put<IApartments>(`${urls.apartments}/` + id, apartment)
 
   }
+  deleteApartment(id: string){
+    return this.httpClient.delete(`${urls.apartments}/` + id)
+  }
 }

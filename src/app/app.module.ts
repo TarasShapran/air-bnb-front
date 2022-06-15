@@ -32,6 +32,8 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { PersonalInfoComponent } from './components/personal-info/personal-info.component';
 import { EditApartmentComponent } from './components/edit-apartment/edit-apartment.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { NewApartmentComponent } from './components/new-apartment/new-apartment.component';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     ApartmentDetailsComponent,
     UserDetailsComponent,
     PersonalInfoComponent,
-    EditApartmentComponent
+    EditApartmentComponent,
+    NewApartmentComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +72,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MDBBootstrapModule,
     MatSelectModule,
     MatPaginatorModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatStepperModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,
