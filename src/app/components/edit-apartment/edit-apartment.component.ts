@@ -13,20 +13,24 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 export class EditApartmentComponent implements OnInit {
   apartment: IApartments;
   newApartment: IApartments;
-  registerForm: FormGroup;
+  updateForm: FormGroup;
 
 
   constructor(private activatedRoute: ActivatedRoute, private apartmentService: ApartmentService, private userService: UserService, private router: Router) {
     this.activatedRoute.params.subscribe(params => {
         let id = params['id']
-        apartmentService.getById(id).subscribe(value => this.apartment = value)
+        apartmentService.getById(id).subscribe(value => {
+          this.apartment = value
+          this.updateForm.patchValue(value)
+        })
+
 
       }
     )
   }
 
   ngOnInit(): void {
-    this.registerForm = new FormGroup({
+    this.updateForm = new FormGroup({
       country: new FormControl(''),
       city: new FormControl(''),
       description: new FormControl(''),
@@ -43,7 +47,7 @@ export class EditApartmentComponent implements OnInit {
 
 
   update() {
-    this.apartmentService.updateApartment(this.apartment.id,this.registerForm.getRawValue()).subscribe(() => {
+    this.apartmentService.updateApartment(this.apartment.id, this.updateForm.getRawValue()).subscribe(() => {
       this.router.navigate(['personal-info'])
     })
   }

@@ -2,8 +2,9 @@
   <h2>{{user.name}}</h2>
   <img class="img-wrap" src="{{user.avatar}}" alt="avatar">
   <p>Email: {{user.email}}</p>
-
+  <h2>Щоб редагувати натисніть на житло</h2>
   <div class="wrap">
+
     <app-apartment  *ngFor="let apartment of apartments" [apartment]="apartment" ></app-apartment>
   </div>
 
