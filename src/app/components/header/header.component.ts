@@ -17,11 +17,16 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.transferService.currentUserSubject.subscribe(value => {
-      if (value) {
-        this.user =value
-        this.email = value.email;
-      }
+    // this.transferService.currentUserSubject.subscribe(value => {
+    //   if (value) {
+    //     this.user =value
+    //     this.email = value.email;
+    //   }
+    // })
+    this.userService.getMe().subscribe(value => {
+      console.log(value)
+      this.user=value
+      this.email = value.email;
     })
   }
 

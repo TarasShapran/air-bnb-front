@@ -19,7 +19,7 @@ export class ApartmentsComponent implements OnInit {
   city: string;
   minPrice: number
   maxPrice: number
-  pageSize = 5;
+  pageSize = 10;
   currentPage = 1;
   totalRows: 1;
   pageSizeOptions: number[] = [8, 16, 25, 100];
@@ -32,7 +32,7 @@ export class ApartmentsComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.loadData();
+
     // this.apartmentService.getAll().subscribe(value => {
     //   this.apartments = value
     // })
@@ -51,10 +51,14 @@ export class ApartmentsComponent implements OnInit {
       maxPrice: new FormControl(10000),
     })
     this.form.valueChanges.subscribe(value => {
-      this.apartmentService.getAll(this.pageSize, this.currentPage, value.orderBy, value.country, value.city, value.minPrice, value.maxPrice).subscribe(value => {
-        this.apartments = value
+      this.apartmentService.getAll(/*this.pageSize, this.currentPage,*/ value.orderBy, value.country, value.city, value.minPrice, value.maxPrice).subscribe(value => {
+        // this.apartments = value
+        this._allApartaments = value;
+        this.paginator.length = value.length;
+        this._paginate();
       })
     })
+    this.loadData();
   }
 
   loadData() {
@@ -73,7 +77,6 @@ export class ApartmentsComponent implements OnInit {
   }
 
   pageChanged(event: PageEvent) {
-    console.log({event})
     this.pageSize = event.pageSize;
     this.currentPage = event.pageIndex;
     this._paginate();

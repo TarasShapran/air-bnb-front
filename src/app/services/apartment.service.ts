@@ -14,11 +14,11 @@ export class ApartmentService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getAll(perPage = 0, page = 0, sortBy = 'createdAt', country = '', city = '', priceGte = 0, priceLte = 10000): Observable<IApartments[]> {
+  getAll(/*perPage = 0, page = 0,*/ sortBy = 'createdAt', country = '', city = '', priceGte = 0, priceLte = 10000): Observable<IApartments[]> {
     const httpParams = new HttpParams({
       fromObject: {
-        perPage,
-        page,
+/*        perPage,
+        page,*/
         sortBy,
         country,
         city,
@@ -41,7 +41,12 @@ export class ApartmentService {
     return this.httpClient.put<IApartments>(`${urls.apartments}/` + id, apartment)
 
   }
-  deleteApartment(id: string){
+
+  deleteApartment(id: string) {
     return this.httpClient.delete(`${urls.apartments}/` + id)
+  }
+
+  createApartment(apartment: IApartments) {
+    return this.httpClient.post(`${urls.apartments}`, apartment)
   }
 }

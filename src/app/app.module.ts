@@ -34,6 +34,7 @@ import { EditApartmentComponent } from './components/edit-apartment/edit-apartme
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NewApartmentComponent } from './components/new-apartment/new-apartment.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatSelectModule,
     MatPaginatorModule,
     MatCheckboxModule,
-    MatStepperModule
+    MatStepperModule,
+    MatToolbarModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,
